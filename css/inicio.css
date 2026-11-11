@@ -1,0 +1,253 @@
+
+:root {
+    --primary: #173B30;
+    --primary-hover: #245746;
+    --accent: #9BCB9E;
+    --background: #F5F7F5;
+    --surface: #FFFFFF;
+    --text: #263B32;
+    --text-secondary: #7C8981;
+    --border: #E1E7E2;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: var(--background);
+    color: var(--text);
+}
+
+/* HEADER */
+.header {
+    background: #F5F7F5;
+    width: 100%;
+    height: 78px;
+    padding: 0 5.5%;
+
+    display: flex;
+    align-items: center;
+    gap: 40px;
+
+    border-bottom: 1px solid var(--border);
+}
+
+/* LOGO */
+.marca {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;
+}
+
+.logo-icono {
+    background: var(--primary);
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+
+.logo-texto h2 {
+    font-size: 19px;
+    color: var(--text);
+    margin-bottom: 4px;
+}
+
+.logo-texto span {
+    font-size: 9px;
+    letter-spacing: 2px;
+    font-weight: bold;
+    color: var(--text-secondary);
+}
+
+/* NAVEGACIÓN */
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    flex-shrink: 0;
+}
+
+.nav a {
+    color: #65716B;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.nav a:hover,
+.nav a.activo {
+    color: var(--primary);
+}
+
+/* BUSCADOR */
+.buscador {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 30px;
+
+    padding: 12px 18px;
+    width: 320px;
+    flex-shrink: 1;
+}
+
+.buscador i {
+    font-size: 14px;
+}
+
+.buscador input {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 14px;
+}
+
+.buscador input::placeholder {
+    color: #98A39C;
+}
+
+/* OPCIONES */
+.opciones {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    flex-shrink: 0;
+}
+
+.notificaciones {
+    color: var(--primary);
+    font-size: 19px;
+    text-decoration: none;
+}
+
+/* USUARIO */
+.usuario {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 30px;
+    padding: 5px 12px 5px 5px;
+}
+
+.avatar {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: #D8EBDD;
+    color: var(--primary);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+        width: 80%;
+        height: 80%;
+        object-fit: cover;
+    }
+}
+
+.usuario-info {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    max-width: 115px;
+}
+
+.usuario-info strong {
+    font-size: 12px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.usuario-info small {
+    font-size: 11px;
+    color: var(--text-secondary);
+    text-transform: capitalize;
+}
+
+.usuario a {
+    color: var(--text-secondary);
+    font-size: 11px;
+    margin-left: 5px;
+}
+
+/* CARRITO */
+.carrito {
+    width: 44px;
+    height: 44px;
+    background: var(--primary);
+    color: white;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+
+        img {
+        width: 60%;
+        height: 60%;
+        object-fit: cover;
+    }
+}
+
+.carrito:hover {
+    background: var(--primary-hover);
+}
+
+/* RESPONSIVE */
+@media (max-width: 1100px) {
+    .header {
+        height: auto;
+        padding: 20px;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .buscador {
+        margin-left: 0;
+        flex: 1;
+    }
+}
+
+@media (max-width: 700px) {
+    .header {
+        flex-direction: column;
+    }
+
+    .nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .buscador {
+        width: 100%;
+        flex: auto;
+    }
+
+    .opciones {
+        justify-content: center;
+    }
+}

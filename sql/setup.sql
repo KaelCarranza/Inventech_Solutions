@@ -1,0 +1,12 @@
+CREATE DATABASE IF NOT EXISTS tienda_inventech CHARACTER SET utf8mb4;
+USE tienda_inventech;
+
+
+CREATE TABLE IF NOT EXISTS users (
+  userId INT AUTO_INCREMENT PRIMARY KEY,
+  email VARCHAR(100) NOT NULL UNIQUE,
+  password VARCHAR(255) NOT NULL,
+  role ENUM('cliente','admin') DEFAULT 'cliente',
+  loginStatus TINYINT(1) DEFAULT 0,
+  registerDate DATETIME DEFAULT CURRENT_TIMESTAMP
+);
