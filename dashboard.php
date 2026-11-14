@@ -38,8 +38,8 @@ if (!isset($_SESSION["userId"])) {
 
         <nav class="nav">
             <a href="dashboard.php" class="activo">Inicio</a>
-            <a href="products.php">Productos</a>
-            <a href="orders.php">Mis pedidos</a>
+            <a href="listaProductos.php">Productos</a>
+            <a href="pedidos.php">Mis pedidos</a>
             <a href="crud.php">Administrador</a>
         </nav>
 
