@@ -1,4 +1,3 @@
-
 <?php
 session_start();
 
@@ -41,6 +40,7 @@ if (!isset($_SESSION["userId"])) {
             <a href="dashboard.php" class="activo">Inicio</a>
             <a href="products.php">Productos</a>
             <a href="orders.php">Mis pedidos</a>
+            <a href="crud.php">Administrador</a>
         </nav>
 
         <form class="buscador" action="products.php" method="GET">
@@ -89,12 +89,13 @@ if (!isset($_SESSION["userId"])) {
     <p>Sistema en construcción. Por favor, navega a través de las secciones disponibles.</p>
     <div class="contenedor">
         <div class="tarjeta">
-        <img src="img/tarjetaVideo.jpeg" alt="Imagen de tarjeta de video" class="imagen-principal">
-        <p>
-            <strong>Tarjeta de Video</strong><br>
-            Descripción: Tarjeta gráfica de alto rendimiento para juegos y diseño.<br>
-            Precio: ₡250.000<br>
-        <div>
-    <div>
+            <img src="img/tarjetaVideo.jpeg" alt="Imagen de tarjeta de video" class="imagen-principal">
+            <p>
+                <strong>Tarjeta de Video</strong><br>
+                Descripción: Tarjeta gráfica de alto rendimiento para juegos y diseño.<br>
+                Precio: ₡250.000<br>
+            <div>
+                <div>
 </body>
+
 </html>
